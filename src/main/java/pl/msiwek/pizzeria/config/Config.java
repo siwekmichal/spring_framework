@@ -10,17 +10,16 @@ import pl.msiwek.pizzeria.implementation.ExoticPizza;
 
 import pl.msiwek.pizzeria.implementation.Order;
 
-@Configuration
+//@Configuration
 public class Config {
 	
-	@Bean
-	public IPizza pizza() {
-//		
-		return new ExoticPizza(17, "Egzotyczna");
-	}
+//	@Bean
+//	public IPizza pizza() {
+//		return new ExoticPizza(17, "Egzotyczna");
+//	}
 	
-	@Bean(name = "inna")
-	public IOrder order (IPizza pizza) {
-		return new Order(pizza);
-	}
+//	@Bean(name = "inna")
+//	public IOrder order (IPizza pizza) {
+//		return new Order(pizza);
+//	}
 }

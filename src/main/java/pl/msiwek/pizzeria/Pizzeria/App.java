@@ -4,6 +4,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 
 import pl.msiwek.pizzeria.api.IOrder;
+import pl.msiwek.pizzeria.config.AutoConfig;
 import pl.msiwek.pizzeria.config.Config;
 import pl.msiwek.pizzeria.implementation.ExoticPizza;
 import pl.msiwek.pizzeria.implementation.GoodPizza;
@@ -23,13 +24,17 @@ public class App
 //        order.printOrder();
 //        order2.printOrder();
 //        
-        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(Config.class);
+//        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(Config.class);
         
         // pobranie beana v1
 //        IOrder order = (IOrder) context.getBean("inna");
 //        order.printOrder();
 //      
         // pobranie beana v2 (dobre podejscie)
+    	
+    	
+    	// automatyczne wiazanie
+    	AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(AutoConfig.class);
         IOrder order = (IOrder) context.getBean(Order.class);
         order.printOrder();
 

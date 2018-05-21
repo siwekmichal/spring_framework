@@ -1,8 +1,12 @@
 package pl.msiwek.pizzeria.implementation;
 
+import org.springframework.stereotype.Component;
+
 import pl.msiwek.pizzeria.api.IOrder;
 import pl.msiwek.pizzeria.api.IPizza;
 
+
+@Component
 public class Order implements IOrder{
 	
 	private IPizza pizza;
