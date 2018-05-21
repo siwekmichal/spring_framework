@@ -1,5 +1,6 @@
 package pl.msiwek.pizzeria.implementation;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 import pl.msiwek.pizzeria.api.IOrder;
@@ -11,8 +12,9 @@ public class Order implements IOrder{
 	
 	private IPizza pizza;
 	
-	public Order(IPizza pizza) {
+	public Order(@Qualifier("Egzotyczna")  IPizza pizza) {
 		super();
+		pizza.setPrice(10);
 		this.pizza = pizza;
 	}
 

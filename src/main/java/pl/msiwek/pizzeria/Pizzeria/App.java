@@ -35,8 +35,11 @@ public class App
     	
     	// automatyczne wiazanie
     	AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(AutoConfig.class);
-        IOrder order = (IOrder) context.getBean(Order.class);
+//        IOrder order = (IOrder) context.getBean(Order.class);
+    	IOrder order = (IOrder) context.getBean(IOrder.class);
         order.printOrder();
+        IOrder order2 = context.getBean(Order.class);
+        order2.printOrder();
 
         
         
